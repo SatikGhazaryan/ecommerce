@@ -1,6 +1,8 @@
 import express from 'express';
 import mongoose from 'mongoose';
-import indexRouter from './routers';
+import adminRouter from './routers/admin-router.js';
+import userRouter from './routers/user-router.js';
+
 const app = express();
 const port = 5000;
 const json = express.json(); 
@@ -16,4 +18,6 @@ app.use('/front', staticFiles);
 
 app.listen(port, ()=> console.log(`Server is listening port ${port}`));
 
-app.use(contactRouter);
+app.use(adminRouter);
+app.use(userRouter);
+
