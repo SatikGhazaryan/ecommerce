@@ -1,19 +1,15 @@
-'use strict';
-
-const mongoose = require('mongoose');
-
+"use strict";
+const mongoose = require("mongoose");
 const { Schema } = mongoose;
-
-const categorieSchemas = new Schema(
-    {
-        nameCategorie: {
-            type: String,
-            // required: true,
-        }
-        
-    }, {collection: 'categories'}
+const categoriesSchemas = new Schema(
+  {
+    nameCategorie: {
+      type: String,
+      // required: true,
+    },
+  },
+  { collection: "categories" }
 );
-
-const categorie= mongoose.model('categorie', categorieSchemas);
+const categorie = mongoose.model("categorie", categoriesSchemas);
 
 module.exports = categorie;
