@@ -27,26 +27,31 @@ li.forEach(function(element){
     })
 })
 //create Categories
-function creatCategories(){
-    const form=document.createElement('form')
-    const div=document.createElement('div')
-    div.id='row'
-    const input =document.createElement('input')
-    input.type="text"
-    input.id='categoriesName'
-    input.placeholder='Categories name'
-    div.append(input)
-    form.append(div)
-    const button=document.createElement('input')
-    button.value='Creat Categories'
-    button.id='btn'
-    button.type='submit'
-    form.append(button)
-    document.getElementById('cont').append(form)
-    
-    categorie=false
+function creatCategories() {
+  const form = document.createElement("form");
+  const div = document.createElement("div");
+  div.id = "row";
+  const input = document.createElement("input");
+  input.type = "text";
+  input.id = "categoriesName";
+  input.placeholder = "Categories name";
+  div.append(input);
+  form.append(div);
+  const button = document.createElement("input");
+  button.value = "Creat Categories";
+  button.id = "btn";
+  button.type = "button";
+  form.append(button);
+  document.getElementById("cont").append(form);
+
+  categorie = false;
+  const creatbtn = document.getElementById("btn");
+  creatbtn.addEventListener("click", getCategores);
 }
 
+function getCategores() {
+  ////////////////////////////
+}
 //addProduct
 function addProduct(){
     const form=document.createElement('form')
